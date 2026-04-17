@@ -1,4 +1,6 @@
 #include "include/Window.h"
+#include "include/Shader.h"
+
 
 namespace icarus
 {
@@ -38,17 +40,24 @@ namespace icarus
         glViewport(0, 0, m_width, m_height);
 
         glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
+
+		
 	}
 
     void Window::render_loop()
     {
+        Renderer triangle_renderer;
         while (!glfwWindowShouldClose(m_window))
         {
             processInput(m_window);
             glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
+           
+            triangle_renderer.draw();
+
             glfwSwapBuffers(m_window);
             glfwPollEvents();
+
         }
 	}
 

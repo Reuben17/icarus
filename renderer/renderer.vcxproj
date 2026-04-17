@@ -134,9 +134,13 @@
   <ItemGroup>
     <ClCompile Include="..\dependencies\glad\src\glad.c" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Renderer.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\include\Renderer.h" />
+    <ClInclude Include="src\include\Shader.h" />
     <ClInclude Include="src\include\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

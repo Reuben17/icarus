@@ -4,7 +4,9 @@
 
 #include "include/Window.h"
 
+
 int main()
 {
 	icarus::Window graphics_window(800, 600, "Icarus", NULL, NULL);
+  
 }
